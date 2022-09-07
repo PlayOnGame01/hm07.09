@@ -6,8 +6,8 @@ class Cord
 {
 private:
     char* cordinatx;
-    char* cordy;
-    char* cordez;
+    //char* cordy;
+    //char* cordez;
 
 public:
 
@@ -15,7 +15,7 @@ public:
     {
         cout << "Constructor by Cord\n";
         char* cordinatx = nullptr;
-        char* cordy = nullptr;
+        //char* cordy = nullptr;
         //char* cordz = nullptr;
     }
 
@@ -25,9 +25,9 @@ public:
         cordinatx = new char[strlen(x) + 1];
         strcpy_s(cordinatx, strlen(x) + 1, x);
 
-        //cout << "Cord: y =\n";
-        cordy = new char[strlen(y) + 1];
-        strcpy_s(cordy, strlen(y) + 1, y);
+        ////cout << "Cord: y =\n";
+        //cordy = new char[strlen(y) + 1];
+        //strcpy_s(cordy, strlen(y) + 1, y);
 
         ////cout << "Cord: z =\n";
         //cordez = new char[strlen(z) + 1];
@@ -39,7 +39,7 @@ public:
     void Print()
     {
         cout << "Cord: x = " << cordinatx << "\n";
-        cout << "Cord: y = " << cordy << "\n";
+        //cout << "Cord: y = " << cordy << "\n";
         //cout << "Cord: z = " << cordez << "\n";
     }
     void Input() {
@@ -50,13 +50,13 @@ public:
             cout << cordinatx << " is removed! \n";
             delete[]cordinatx;
         }
-        cordy = new char[strlen(buf) + 1];
-        strcpy_s(cordy, strlen(buf) + 1, buf);
-        cin.getline(buf, 200);
-        if (cordy != nullptr) {
-            cout << cordy << " is removed! \n";
-            delete[]cordy;
-        }
+        //cordy = new char[strlen(buf) + 1];
+        //strcpy_s(cordy, strlen(buf) + 1, buf);
+        //cin.getline(buf, 200);
+        //if (cordy != nullptr) {
+        //    cout << cordy << " is removed! \n";
+        //    delete[]cordy;
+        //}
         //cordez = new char[strlen(buf) + 1];
         //strcpy_s(cordez, strlen(buf) + 1, buf);
         //cin.getline(buf, 200);
@@ -69,7 +69,7 @@ public:
     {
         cout << "Destructor\n";
         delete[]cordinatx;
-        delete[]cordy;
+        //delete[]cordy;
         //delete[]cordez;
     }
     void Setcordinatx(char* x)
@@ -81,14 +81,14 @@ public:
         return cordinatx;
     }
 
-    void Setcordy(char* y)
-    {
-        cordy = y;
-    }
-    char* Getcordy()
-    {
-        return cordy;
-    }
+    //void Setcordy(char* y)
+    //{
+    //    cordy = y;
+    //}
+    //char* Getcordy()
+    //{
+    //    return cordy;
+    //}
     //void Setcordz(char* z)
     //{
     //    cordez = z;
